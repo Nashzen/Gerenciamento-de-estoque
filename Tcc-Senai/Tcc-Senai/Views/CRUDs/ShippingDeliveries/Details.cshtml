@@ -1,0 +1,58 @@
+﻿@model TCC_Senai.Models.ShippingDelivery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ShippingDelivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityDelivered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityDelivered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
