@@ -48,6 +48,14 @@ namespace TCC_Senai.Controllers
             return View(login);
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult Index()
         {
             return View();
