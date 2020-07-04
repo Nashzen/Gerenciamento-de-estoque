@@ -18,7 +18,7 @@ namespace TCC_Senai.Controllers
         // GET: ShippingDeliveries
         public ActionResult Index()
         {
-            return View(db.StockDeliveries.ToList());
+            return View(db.ShippingDeliveries.ToList());
         }
 
         // GET: ShippingDeliveries/Details/5
@@ -28,7 +28,7 @@ namespace TCC_Senai.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShippingDelivery shippingDelivery = db.StockDeliveries.Find(id);
+            ShippingDelivery shippingDelivery = db.ShippingDeliveries.Find(id);
             if (shippingDelivery == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace TCC_Senai.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.StockDeliveries.Add(shippingDelivery);
+                db.ShippingDeliveries.Add(shippingDelivery);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace TCC_Senai.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShippingDelivery shippingDelivery = db.StockDeliveries.Find(id);
+            ShippingDelivery shippingDelivery = db.ShippingDeliveries.Find(id);
             if (shippingDelivery == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace TCC_Senai.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShippingDelivery shippingDelivery = db.StockDeliveries.Find(id);
+            ShippingDelivery shippingDelivery = db.ShippingDeliveries.Find(id);
             if (shippingDelivery == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace TCC_Senai.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            ShippingDelivery shippingDelivery = db.StockDeliveries.Find(id);
-            db.StockDeliveries.Remove(shippingDelivery);
+            ShippingDelivery shippingDelivery = db.ShippingDeliveries.Find(id);
+            db.ShippingDeliveries.Remove(shippingDelivery);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

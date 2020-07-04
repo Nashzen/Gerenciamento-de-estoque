@@ -10,6 +10,6 @@ namespace TCC_Senai.Models
 
         public string ProductId { get; set; }
 
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

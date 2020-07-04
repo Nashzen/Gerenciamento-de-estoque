@@ -139,6 +139,12 @@
     <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Models\Context\Context.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Maps\EmployeeMap.cs" />
+    <Compile Include="Models\Maps\ProductsMap.cs" />
+    <Compile Include="Models\Maps\ProvidersMap.cs" />
+    <Compile Include="Models\Maps\ShippingDeliveriesMap.cs" />
+    <Compile Include="Models\Maps\StocksMap.cs" />
+    <Compile Include="Models\Maps\UsersMap.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Provider.cs" />
     <Compile Include="Models\ShippingDelivery.cs" />

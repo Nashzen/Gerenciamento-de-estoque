@@ -13,6 +13,8 @@ namespace TCC_Senai.Models
 
         public int QuantityDelivered { get; set; }
 
-        public Provider Provider { get; set; }
+        public string IdProvider { get; set; }
+
+        public virtual Provider Provider { get; set; }
     }
 }

@@ -38,7 +38,7 @@ namespace TCC_Senai.Controllers
                 }
                 else
                 {
-                    RedirectToAction("Home", "Login");
+                    RedirectToAction("Home", "Index");
                 }
             }
             else
