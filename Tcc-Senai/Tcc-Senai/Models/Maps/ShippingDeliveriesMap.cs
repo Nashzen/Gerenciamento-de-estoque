@@ -19,7 +19,7 @@ namespace TCC_Senai.Models.Maps
             Property(x => x.EstimateDate).IsRequired();
             Property(x => x.DeliveryDate).IsRequired();
             Property(x => x.QuantityDelivered).IsRequired();
-            Property(x => x.DeliveryValue).IsRequired();
+            Property(x => x.DeliveryValue).IsOptional();
             Property(x => x.CreationDate).IsRequired();
 
             Property(x => x.IdProvider).HasColumnName("IdProvider").IsRequired();

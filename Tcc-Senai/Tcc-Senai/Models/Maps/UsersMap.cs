@@ -17,12 +17,11 @@ namespace TCC_Senai.Models.Maps
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity); //Define o autoincrement da PK
 
             Property(x => x.UserName).HasMaxLength(30).IsRequired();
-            Property(x => x.Password).HasMaxLength(15).IsRequired();
-
+            Property(x => x.Password).HasMaxLength(15).IsRequired();            
             Property(x => x.CreationDate).IsRequired();
 
-            //Property(x => x.ProductId).HasColumnName("IdProduto").IsRequired();
-            //HasRequired(x => x.Product).WithMany().HasForeignKey(x => x.ProductId).WillCascadeOnDelete();
+            Property(x => x.IdEmployee).HasColumnName("IdEmployee").IsRequired();
+            HasRequired(x => x.Employee).WithMany().HasForeignKey(x => x.IdEmployee).WillCascadeOnDelete();
 
 
         }

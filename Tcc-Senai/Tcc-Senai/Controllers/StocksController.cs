@@ -13,7 +13,7 @@ namespace TCC_Senai.Controllers
 {
     public class StocksController : Controller
     {
-        private Context db = new Context();
+        private SysgamesContext db = new SysgamesContext();
 
         // GET: Stocks
         public ActionResult Index()

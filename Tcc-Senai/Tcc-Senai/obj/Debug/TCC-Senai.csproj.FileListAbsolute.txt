@@ -268,3 +268,5 @@ C:\Users\Usuario\Documents\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debu
 C:\Users\Usuario\Documents\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debug\TCC-Senai.csproj.CopyComplete
 C:\Users\Usuario\Documents\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debug\TCC-Senai.dll
 C:\Users\Usuario\Documents\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debug\TCC-Senai.pdb
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debug\TCC_Senai.Migrations.inicial.resources
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Tcc-Senai\TCC-Senai\obj\Debug\TCC-Senai.csproj.GenerateResource.cache

@@ -7,7 +7,7 @@ using TCC_Senai.Models.Maps;
 
 namespace TCC_Senai.Models.Context
 {
-    public class Context : DbContext
+    public class SysgamesContext : DbContext
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

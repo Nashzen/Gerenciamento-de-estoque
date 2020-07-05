@@ -17,7 +17,7 @@ namespace TCC_Senai.Models
         [Display(Name = "ativo")]
         public bool IsActive { get; set; }
 
-        public string IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
 
         public virtual Employee Employee { get; set; }
     }

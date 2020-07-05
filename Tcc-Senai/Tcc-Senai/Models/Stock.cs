@@ -8,7 +8,7 @@ namespace TCC_Senai.Models
 
         public int AvailableAmmount { get; set; }
 
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
 
         public virtual Product Product { get; set; }
     }

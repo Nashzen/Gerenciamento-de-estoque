@@ -40,13 +40,13 @@
             <nav style="padding-left:25%" class="navbar navbar-inverse" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                    @*<div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
+                        </button>*@
                         <div class="row">
                             <a class="navbar-brand"><img src="https://img.icons8.com/cotton/30/000000/controller.png" /></a>
                             <h3 class="card-title">SysGames</h3>
@@ -59,14 +59,14 @@
                         <ul class="nav navbar-nav">
                             <li class=""><a class="darksg" href="#">Início</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordens de serviço <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="">@Html.ActionLink("Produtos", "Index", "Products")</li>
                                     <li class="">@Html.ActionLink("Cadastrar produto", "Create", "Products")</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Funcionários <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="">@Html.ActionLink("Funcionários", "Index", "Employees")</li>
                                     <li class="">@Html.ActionLink("Cadastro de funcionário", "Create", "Employees")</li>
