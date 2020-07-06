@@ -9,7 +9,8 @@ namespace TCC_Senai.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(TCC_Senai.Models.Context.SysgamesContext context)

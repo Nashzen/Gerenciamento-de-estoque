@@ -9,6 +9,9 @@ namespace TCC_Senai.Models.Context
 {
     public class SysgamesContext : DbContext
     {
+        public SysgamesContext() : base("Sysgames")
+        {
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new EmployeeMap());
