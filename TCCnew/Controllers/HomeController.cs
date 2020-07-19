@@ -10,6 +10,7 @@ namespace TCCnew.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -17,11 +18,13 @@ namespace TCCnew.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Login(Funcionario user)
         {
             return RedirectToAction("Index", "Home");
         }
 
+        [Authorize]
         public ActionResult Logout()
         {
             Session.Clear();
@@ -30,6 +33,7 @@ namespace TCCnew.Controllers
             return RedirectToAction("Login", "Home");
         }
 
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -37,6 +41,7 @@ namespace TCCnew.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

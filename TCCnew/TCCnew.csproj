@@ -133,6 +133,7 @@
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JogoController.cs" />
+    <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\RelatorioController.cs" />
     <Compile Include="Controllers\Relatorio\RelatorioFuncionarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,6 +219,7 @@
     <Content Include="Views\Entrega\Edit.cshtml" />
     <Content Include="Views\Entrega\Index.cshtml" />
     <Content Include="Views\Relatorio\RelatorioFuncionarioView.cshtml" />
+    <Content Include="Views\Conta\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -16,12 +16,14 @@ namespace TCCnew.Controllers
         private GamesContext db = new GamesContext();
 
         // GET: Fornecedor
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Fornecedores.ToList());
         }
 
         // GET: Fornecedor/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Fornecedor/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +50,7 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Nome,CNPJ,Telefone,Email,CreationDate")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
@@ -60,6 +64,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Fornecedor/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +84,7 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Nome,CNPJ,Telefone,Email,CreationDate")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
@@ -91,6 +97,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Fornecedor/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +115,7 @@ namespace TCCnew.Controllers
         // POST: Fornecedor/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Fornecedor fornecedor = db.Fornecedores.Find(id);
