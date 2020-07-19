@@ -1,0 +1,47 @@
+﻿@model List<TCCnew.Models.Funcionario>
+@{
+    ViewBag.Title = "RelatorioFuncionarioView";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Relatório de funcionários</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="col-md-12 text-center">
+        <img src="https://img.icons8.com/color/96/000000/men-age-group-5.png" />
+        <h3>RELATÓRIO DE FUNCIONÁRIOS</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Salário</th>
+                <th>Está contratado?</th>
+                <th>É gerente?</th>
+            </tr>
+        </thead>
+        @{
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Telefone</td>
+                    <td>@item.Salario</td>
+                    <td>@item.IsAtivo</td>
+                    <td>@item.IsGerente</td>
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>
+
+@*ÍCONES USADOS*@
+@*<a href="https://icons8.com/icon/46980/visual-game-boy">Visual Game Boy icon by Icons8</a>*@
+

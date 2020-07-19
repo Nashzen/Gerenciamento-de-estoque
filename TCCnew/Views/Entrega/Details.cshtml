@@ -1,0 +1,58 @@
+﻿@model TCCnew.Models.Entrega
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Entrega</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEntregue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEntregue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdFornecedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdFornecedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

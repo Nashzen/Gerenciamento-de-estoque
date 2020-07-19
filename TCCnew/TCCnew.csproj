@@ -127,21 +127,28 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EntregaController.cs" />
+    <Compile Include="Controllers\EstoqueController.cs" />
+    <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JogoController.cs" />
+    <Compile Include="Controllers\RelatorioController.cs" />
+    <Compile Include="Controllers\Relatorio\RelatorioFuncionarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Models\DAL\GamesContext.cs" />
     <Compile Include="Models\DAL\GamesInitializer.cs" />
-    <Compile Include="Models\Entrega.cs" />
-    <Compile Include="Models\EntregaJogo.cs" />
-    <Compile Include="Models\Estoque.cs" />
-    <Compile Include="Models\Fornecedor.cs" />
-    <Compile Include="Models\FornecedorEntrega.cs" />
-    <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\Jogo.cs" />
+    <Compile Include="Models\Domain\Entrega.cs" />
+    <Compile Include="Models\Domain\EntregaJogo.cs" />
+    <Compile Include="Models\Domain\Estoque.cs" />
+    <Compile Include="Models\Domain\Fornecedor.cs" />
+    <Compile Include="Models\Domain\FornecedorEntrega.cs" />
+    <Compile Include="Models\Domain\Funcionario.cs" />
+    <Compile Include="Models\Domain\Jogo.cs" />
+    <Compile Include="Models\Relatorios\RelatorioFuncionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +164,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -189,10 +197,29 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\Fornecedor\Create.cshtml" />
+    <Content Include="Views\Fornecedor\Delete.cshtml" />
+    <Content Include="Views\Fornecedor\Details.cshtml" />
+    <Content Include="Views\Fornecedor\Edit.cshtml" />
+    <Content Include="Views\Fornecedor\Index.cshtml" />
+    <Content Include="Views\Jogo\Create.cshtml" />
+    <Content Include="Views\Jogo\Delete.cshtml" />
+    <Content Include="Views\Jogo\Details.cshtml" />
+    <Content Include="Views\Jogo\Edit.cshtml" />
+    <Content Include="Views\Jogo\Index.cshtml" />
+    <Content Include="Views\Estoque\Create.cshtml" />
+    <Content Include="Views\Estoque\Delete.cshtml" />
+    <Content Include="Views\Estoque\Details.cshtml" />
+    <Content Include="Views\Estoque\Edit.cshtml" />
+    <Content Include="Views\Estoque\Index.cshtml" />
+    <Content Include="Views\Entrega\Create.cshtml" />
+    <Content Include="Views\Entrega\Delete.cshtml" />
+    <Content Include="Views\Entrega\Details.cshtml" />
+    <Content Include="Views\Entrega\Edit.cshtml" />
+    <Content Include="Views\Entrega\Index.cshtml" />
+    <Content Include="Views\Relatorio\RelatorioFuncionarioView.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Domain\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -205,6 +232,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rotativa\Rotativa.csproj">
+      <Project>{d93faa11-31f0-4629-b53c-aa8680283529}</Project>
+      <Name>Rotativa</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -146,6 +146,7 @@ C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFr
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Newtonsoft.Json.dll
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Rotativa.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Helpers.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Mvc.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Optimization.dll
@@ -154,6 +155,7 @@ C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.W
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.WebPages.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.WebPages.Razor.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\WebGrease.dll
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Rotativa.pdb
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFramework.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFramework.SqlServer.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Helpers.xml
