@@ -1,4 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 using TCCnew.Models.Base;
 
 namespace TCCnew.Models
@@ -27,7 +32,10 @@ namespace TCCnew.Models
         [Range(0, 30000.00)]
         [Display(Name = "Salário")]
         public double Salario { get; set; }
-
+        
+        [Display(Name = "Lembrar Me")]
+        public bool LembrarMe { get; set; }
+        
         [Display(Name = "Funcionário ativo?")]
         public bool IsAtivo { get; set; }
 

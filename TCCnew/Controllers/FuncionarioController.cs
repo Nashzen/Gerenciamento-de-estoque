@@ -62,6 +62,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Funcionario/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -77,6 +78,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Funcionario/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -87,6 +89,7 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Nome,Usuario,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
@@ -100,6 +103,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Funcionario/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -119,6 +123,7 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Nome,Usuario,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
@@ -131,6 +136,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Funcionario/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -148,6 +154,7 @@ namespace TCCnew.Controllers
         // POST: Funcionario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Funcionario funcionario = db.Funcionarios.Find(id);

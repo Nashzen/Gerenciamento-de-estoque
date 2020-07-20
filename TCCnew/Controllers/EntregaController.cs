@@ -16,12 +16,14 @@ namespace TCCnew.Controllers
         private GamesContext db = new GamesContext();
 
         // GET: Entrega
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Entregas.ToList());
         }
 
         // GET: Entrega/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Entrega/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -60,6 +63,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Entrega/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +83,7 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,QuantidadeEntregue,NumeroEntrega,DataEntrega,IdFornecedor,CreationDate")] Entrega entrega)
         {
             if (ModelState.IsValid)
@@ -91,6 +96,7 @@ namespace TCCnew.Controllers
         }
 
         // GET: Entrega/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +114,7 @@ namespace TCCnew.Controllers
         // POST: Entrega/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Entrega entrega = db.Entregas.Find(id);
