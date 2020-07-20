@@ -1,9 +1,4 @@
-﻿﻿using System.ComponentModel.DataAnnotations;
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 using TCCnew.Models.Base;
 
 namespace TCCnew.Models
@@ -16,8 +11,13 @@ namespace TCCnew.Models
 
         [Required]
         [Display(Name = "Usuário")]
-        [StringLength(30, ErrorMessage = "O usuário precisa conter no mínimo 5 dígitos", MinimumLength = 5)]
+        [StringLength(30, ErrorMessage = "O usuário precisa conter no mínimo 3 dígitos", MinimumLength = 3)]
         public string Usuario { get; set; }
+
+        [Required]
+        [Display(Name = "Senha")]
+        [StringLength(15, ErrorMessage = "A senha precisa conter no mínimo 3 dígitos", MinimumLength = 3)]
+        public string Senha { get; set; }
 
         [Required]
         [Display(Name = "CPF")]
@@ -37,10 +37,10 @@ namespace TCCnew.Models
         public bool LembrarMe { get; set; }
         
         [Display(Name = "Funcionário ativo?")]
-        public bool IsAtivo { get; set; }
+        public bool? IsAtivo { get; set; }
 
         [Display(Name = "É gerente?")]
-        public bool IsGerente { get; set; }
+        public bool? IsGerente { get; set; }
     }
     
    

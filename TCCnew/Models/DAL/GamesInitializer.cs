@@ -9,7 +9,13 @@ namespace TCCnew.Models.DAL
     {
         protected override void Seed(GamesContext context)
         {
-            base.Seed(context);
+            var funcionarios = new List<Funcionario>
+            {
+                new Funcionario{Nome="admin", Usuario="admin",Cpf="11111111111",Telefone="1111111111", Salario=10}
+                
+            };
+            funcionarios.ForEach(f => context.Funcionarios.Add(f));
+            context.SaveChanges();
         }
     }
 }
