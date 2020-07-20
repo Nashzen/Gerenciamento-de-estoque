@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<TCCnew.Models.Funcionario>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Funcionários";
@@ -7,9 +9,28 @@
 <h2>Página de funcionários</h2>
 
 <p>
-    <a href='@Url.Action("Create", "Funcionario")' class="btn btn-success"><img src="https://img.icons8.com/material-outlined/15/000000/add-user-male.png" />Cadastrar novo funcionário</a>    
+    <a href='@Url.Action("Create", "Funcionario")' class="btn btn-success"><img src="https://img.icons8.com/material-outlined/15/000000/add-user-male.png" />Cadastrar novo funcionário</a>
 </p>
 <table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            < Ordenar por >
+        </th>
+        <th>
+            @Html.ActionLink("Data de criação", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+    @using (Html.BeginForm("Index", "Funcionario", FormMethod.Get))
+    {
+        <p>
+            Procure por nome ou CPF: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Pesquisar" />
+        </p>
+    }
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
@@ -38,38 +59,41 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Salario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsAtivo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsGerente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreationDate)
-        </td>
-        <td>
-            <a href='@Url.Action("Edit", "Funcionario", new { id = item.Id})' class="btn btn-success" style=""><img src="https://img.icons8.com/ios-filled/14/000000/pencil-tip.png" />Editar</a> |
-            <a href='@Url.Action("Details", "Funcionario", new { id = item.Id})' class="btn btn-info" style=""><img src="https://img.icons8.com/material-outlined/14/000000/search.png" />Detalhes</a> |
-            <a href='@Url.Action("Delete", "Funcionario", new { id = item.Id})' class="btn btn-danger" style=""><img src="https://img.icons8.com/material-outlined/14/000000/delete-trash.png" />Deletar</a>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAtivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsGerente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                <a href='@Url.Action("Edit", "Funcionario", new { id = item.Id})' class="btn btn-success" style=""><img src="https://img.icons8.com/ios-filled/14/000000/pencil-tip.png" />Editar</a> |
+                <a href='@Url.Action("Details", "Funcionario", new { id = item.Id})' class="btn btn-info" style=""><img src="https://img.icons8.com/material-outlined/14/000000/search.png" />Detalhes</a> |
+                <a href='@Url.Action("Delete", "Funcionario", new { id = item.Id})' class="btn btn-danger" style=""><img src="https://img.icons8.com/material-outlined/14/000000/delete-trash.png" />Deletar</a>
+            </td>
+        </tr>
+    }
 
 </table>
+</br>
+

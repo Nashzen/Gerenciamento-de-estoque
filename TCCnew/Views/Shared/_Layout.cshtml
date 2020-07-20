@@ -46,21 +46,43 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Estoque<span class="caret"></span>
+                            Jogos<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Jogos em estoque", "Index", "Estoque")</li>
+                            <li>@Html.ActionLink("Jogos disponíveis", "Index", "Jogo")</li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                           Entregas<span class="caret"></span>
+                            Estoque<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Jogos em estoque", "Index", "Estoque")</li>
+                            <li>@Html.ActionLink("Relatório de Estoque", "Index", "RelatorioEstoque")</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Entregas<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Entregas feitas", "Index", "Entrega")</li>
-                            <li>@Html.ActionLink("Relatório das últimas entregas", "#", "Entrega")</li>
+                            <li>@Html.ActionLink("Relatório de Entregas", "Index", "RelatorioEntrega")</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Sobre o sistema<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Quantidade de funcionários", "About", "Home")</li>
+                            @*<li>@Html.ActionLink("Relatório das últimas entregas", "#", "Entrega")</li>*@
                         </ul>
                     </li>
                 </ul>

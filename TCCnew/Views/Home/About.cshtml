@@ -1,7 +1,28 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿@model IEnumerable<TCCnew.ViewModel.QuantidadeFuncionarios>
+@{
+    ViewBag.Title = "Registro de funcionários";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<table>
+    <tr>
+        @*<th>
+            Data de criação
+        </th>*@
+        <th>
+            Quantidade de funcionários inativos e ativos (Acima inativos, abaixo inativos):
+        </th>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>*@
+                <td>
+                    @item.FuncionariosCount
+                </td>
+            </tr>
+        }
+    </tr>
+</table>

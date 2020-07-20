@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Detalhes do funcionário portador do ID @Html.DisplayFor(x => x.Id)</h2>
+<h2>Detalhes do funcionário portador do ID @Html.DisplayFor(x => x.Id) <img src="https://img.icons8.com/material-outlined/40/000000/search.png" /></h2>
 
 <div>
     <h4>Funcionário</h4>
@@ -77,8 +77,7 @@
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")*@
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <a href='@Url.Action("Edit", "Funcionario")' class="btn btn-success">Editar</a> | <a href='@Url.Action("Index", "Funcionario")' class="btn btn-info">Voltar</a>

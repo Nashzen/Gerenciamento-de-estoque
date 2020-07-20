@@ -9,9 +9,12 @@ namespace TCCnew.Models
 {
     public class Entrega : EntityBase
     {
-
+        [Required]
+        [Display(Name = "Quantidade entregue")]
         public int QuantidadeEntregue { get; set; }
 
+        [Required]
+        [Display(Name = "Número da entrega")]
         public int NumeroEntrega { get; set; }
 
         [Display(Name = "Data de entrega")]
@@ -20,7 +23,7 @@ namespace TCCnew.Models
 
         public int IdFornecedor { get; set; }
 
-        public virtual ICollection<Fornecedor> Fornecedor { get; set; }
+        public virtual Fornecedor Fornecedor { get; set; }
 
     }
 }

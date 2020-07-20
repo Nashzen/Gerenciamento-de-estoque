@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+    <h2>Detalhes do estoque de ID @Html.DisplayFor(x => x.Id) <img src="https://img.icons8.com/material-outlined/40/000000/search.png" /></h2>
 
 <div>
     <h4>Estoque</h4>
@@ -35,6 +35,25 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Jogo)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Nome do jogo</th>
+                </tr>
+                @foreach (var item in Model.Jogo)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.CreationDate)
         </dt>
 
@@ -45,6 +64,9 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a href='@Url.Action("Edit", "Estoque")' class="btn btn-success">Editar</a> | <a href='@Url.Action("Index", "Estoque")' class="btn btn-info">Voltar</a>
+        </div>
+    </div>
 </p>

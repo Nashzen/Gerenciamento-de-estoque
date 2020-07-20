@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,9 +17,48 @@ namespace TCCnew.Controllers
         private GamesContext db = new GamesContext();
 
         // GET: Funcionario
-        public ActionResult Index()
+        public ViewResult Index(string sortOrder, string searchString, string currentFilter, int? page)
         {
-            return View(db.Funcionarios.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var funcionarios = from f in db.Funcionarios
+                           select f;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                funcionarios = funcionarios.Where(s => s.Nome.Contains(searchString)
+                                       || s.Cpf.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    funcionarios = funcionarios.OrderByDescending(f => f.Nome);
+                    break;
+                case "Date":
+                    funcionarios = funcionarios.OrderBy(f => f.CreationDate);
+                    break;
+                case "date_desc":
+                    funcionarios = funcionarios.OrderByDescending(f => f.CreationDate);
+                    break;
+                default:
+                    funcionarios = funcionarios.OrderBy(f => f.Nome);
+                    break;
+            }
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(funcionarios.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Funcionario/Details/5

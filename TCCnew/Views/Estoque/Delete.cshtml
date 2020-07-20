@@ -4,9 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja deletar o estoque com o ID @Html.DisplayFor(x => x.Id)? <img src="https://img.icons8.com/material-outlined/40/000000/delete-trash.png" /></h3>
 <div>
     <h4>Estoque</h4>
     <hr />
@@ -45,12 +43,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Deletar" class="btn btn-danger" /> |
+            <a href='@Url.Action("Index", "Estoque")' class="btn btn-info">Voltar</a>
         </div>
     }
 </div>

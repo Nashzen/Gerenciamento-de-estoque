@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Página de jogos <img src="https://img.icons8.com/cotton/40/000000/controller.png" /></h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a href='@Url.Action("Create", "Jogo")' class="btn btn-success"><img src="https://img.icons8.com/cotton/15/000000/controller.png" />Cadastrar novo jogo</a>
 </p>
 <table class="table">
     <tr>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.CreationDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            <a href='@Url.Action("Edit", "Jogo", new { id = item.Id})' class="btn btn-success" style=""><img src="https://img.icons8.com/ios-filled/14/000000/pencil-tip.png" />Editar</a> |
+            <a href='@Url.Action("Details", "Jogo", new { id = item.Id})' class="btn btn-info" style=""><img src="https://img.icons8.com/material-outlined/14/000000/search.png" />Detalhes</a> |
+            <a href='@Url.Action("Delete", "Jogo", new { id = item.Id})' class="btn btn-danger" style=""><img src="https://img.icons8.com/material-outlined/14/000000/delete-trash.png" />Deletar</a>
         </td>
     </tr>
 }

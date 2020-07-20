@@ -13,6 +13,7 @@ C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\bin\Debug\
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\bin\Debug\System.Web.WebPages.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\obj\Debug\Rotativa.csprojAssemblyReference.cache
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\obj\Debug\Rotativa.csproj.CoreCompileInputs.cache
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\obj\Debug\Rotativa.csproj.CopyComplete
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\Rotativa\obj\Debug\Rotativa.dll

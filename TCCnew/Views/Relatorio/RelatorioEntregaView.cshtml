@@ -1,0 +1,42 @@
+﻿@model List<TCCnew.Models.Entrega>
+@{
+    ViewBag.Title = "RelatorioEntregaView";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Relatório de Entregas</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="col-md-12 text-center">
+        <img src="https://img.icons8.com/plasticine/96/000000/free-shipping.png" />
+        <h3>RELATÓRIO DE ENTREGAS</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nº da entrega</th>
+                <th>Data da entrega</th>
+                <th>Qtd entregue</th>
+                <th>ID Fornecedor</th>
+
+            </tr>
+        </thead>
+        @{
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NumeroEntrega</td>
+                    <td>@item.DataEntrega</td>
+                    <td>@item.QuantidadeEntregue</td>
+                    <td>@item.IdFornecedor</td>                   
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>

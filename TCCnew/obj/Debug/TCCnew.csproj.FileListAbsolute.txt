@@ -146,6 +146,8 @@ C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFr
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Newtonsoft.Json.dll
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.dll
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.Mvc.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Rotativa.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Helpers.dll
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Mvc.dll
@@ -158,6 +160,8 @@ C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\WebGreas
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\Rotativa.pdb
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFramework.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\EntityFramework.SqlServer.xml
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.xml
+C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.Mvc.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Helpers.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Mvc.xml
 C:\Users\leo-s\Documents\GitHub\TCC\Gerenciamento-de-estoque\TCCnew\bin\System.Web.Optimization.xml

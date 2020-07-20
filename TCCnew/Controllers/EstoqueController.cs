@@ -16,7 +16,7 @@ namespace TCCnew.Controllers
         private GamesContext db = new GamesContext();
 
         // GET: Estoque
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
             return View(db.Estoques.ToList());
         }
@@ -47,13 +47,20 @@ namespace TCCnew.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,QuantidadeTotal,QuantidadeDisponivel,IdJogo,CreationDate")] Estoque estoque)
+        public ActionResult Create([Bind(Include = "QuantidadeTotal,QuantidadeDisponivel,IdJogo,CreationDate")] Estoque estoque)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Estoques.Add(estoque);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Estoques.Add(estoque);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception e)
+            {
+                ModelState.AddModelError("", "Não foi possível realizar o cadastro");
             }
 
             return View(estoque);
