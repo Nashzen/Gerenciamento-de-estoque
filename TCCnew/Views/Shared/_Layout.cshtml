@@ -20,6 +20,8 @@
                 @Html.ActionLink("Sysgames", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                @if (Request.IsAuthenticated)
+                {
                 @*Navbar do funcionario*@
                 <ul class="nav navbar-nav">
                     <li>
@@ -65,8 +67,12 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("Index", "Home")">Sair<span class="glyphicon glyphicon-log-out" style="padding-left: 5px;"></span></a></li>
-                </ul>
+                    <li><a href="#">Seja Bem-Vindo @User.Identity.Name</a></li>
+                    @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" })) 
+                    {
+                        <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair<span class="glyphicon glyphicon-log-out" style="padding-left: 5px;"></span></a></li>
+                    }
+                </ul>}
             </div>
         </div>
     </div>
