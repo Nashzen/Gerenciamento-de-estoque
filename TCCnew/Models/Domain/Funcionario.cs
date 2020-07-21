@@ -1,46 +1,57 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using TCCnew.Models.Base;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using TCCnew.Models.DAL;
+using System.Data.SqlClient;
 
 namespace TCCnew.Models
 {
     public class Funcionario : EntityBase
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "Digite um nome")]
         public string Nome { get; set; }
 
         [Required]
         [Display(Name = "Usuário")]
-        [StringLength(30, ErrorMessage = "O usuário precisa conter no mínimo 3 dígitos", MinimumLength = 3)]
         public string Usuario { get; set; }
 
-        [Required]
-        [Display(Name = "Senha")]
-        [StringLength(15, ErrorMessage = "A senha precisa conter no mínimo 3 dígitos", MinimumLength = 3)]
-        public string Senha { get; set; }
-
-        [Required]
-        [Display(Name = "CPF")]
-        [StringLength(11, ErrorMessage = "CPF contém apenas 11 dígitos")]
         public string Cpf { get; set; }
 
-        [Required]
-        [StringLength(11, ErrorMessage = "Telefone inválido" , MinimumLength = 10)]
         public string Telefone { get; set; }
 
-        [Required]
-        [Range(0, 30000.00)]
-        [Display(Name = "Salário")]
         public double Salario { get; set; }
-        
-        [Display(Name = "Lembrar Me")]
-        public bool LembrarMe { get; set; }
-        
-        [Display(Name = "Funcionário ativo?")]
-        public bool? IsAtivo { get; set; }
 
-        [Display(Name = "É gerente?")]
-        public bool? IsGerente { get; set; }
+        [Display(Name = "Está Ativo")]
+        public bool IsAtivo { get; set; }
+
+        public bool IsGerente { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Senha")]        
+        public string Senha { get; set; }
+
+        
+        public static bool AutorizarLogin(string login, string senha)
+        {
+            var teste = false;
+
+            using (var con = new SqlConnection())
+            {
+                con.ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=D:\TCC\Gerenciamento-de-estoque\TCCnew\App_Data\TCCnew.mdf;Initial Catalog=TCCnew;Integrated Security=True";
+                con.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = con;
+                    comando.CommandText = string.Format(
+                        "select count(*) from Funcionario where usuario='{0}' and senha='{1}'", login, senha);
+                    teste = ((int)comando.ExecuteScalar() > 0);
+                }
+            }
+
+            return teste;
+        }
     }
     
    

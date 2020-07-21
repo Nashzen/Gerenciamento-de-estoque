@@ -20,18 +20,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(u => u.Cpf, new { @class = "control-label col-md-2" })
+                    @Html.LabelFor(u => u.Senha, new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.PasswordFor(u => u.Cpf, new { @class = "form-control" })
+                        @Html.PasswordFor(u => u.Senha, new { @class = "form-control" })
                         @Html.ValidationMessageFor(u => u.Usuario, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-10 col-md-offset-2">
-                        @Html.CheckBoxFor(u=>u.LembrarMe)
-                        @Html.LabelFor(u=>u.LembrarMe)
-                    </div>
-                </div>
+                
                 <div class="form-group">
                     <div class="col-md-10 col-md-offset-2">
                         <input type="submit" class="btn btn-success" value="Entrar" />

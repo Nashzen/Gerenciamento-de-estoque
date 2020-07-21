@@ -90,7 +90,7 @@ namespace TCCnew.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "Id,Nome,Usuario,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate")] Funcionario funcionario)
+        public ActionResult Create([Bind(Include = "Id,Nome,Usuario,Senha,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             {

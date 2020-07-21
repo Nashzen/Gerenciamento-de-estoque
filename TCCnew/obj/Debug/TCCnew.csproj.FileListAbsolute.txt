@@ -276,3 +276,7 @@ D:\TCC\Gerenciamento-de-estoque\TCCnew\obj\Debug\TCCnew.csproj.CoreCompileInputs
 D:\TCC\Gerenciamento-de-estoque\TCCnew\obj\Debug\TCCnew.csproj.CopyComplete
 D:\TCC\Gerenciamento-de-estoque\TCCnew\obj\Debug\TCCnew.dll
 D:\TCC\Gerenciamento-de-estoque\TCCnew\obj\Debug\TCCnew.pdb
+D:\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.dll
+D:\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.Mvc.dll
+D:\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.xml
+D:\TCC\Gerenciamento-de-estoque\TCCnew\bin\PagedList.Mvc.xml

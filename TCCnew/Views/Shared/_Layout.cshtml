@@ -22,79 +22,80 @@
             <div class="navbar-collapse collapse">
                 @if (Request.IsAuthenticated)
                 {
-                @*Navbar do funcionario*@
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Funcionários <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Listagem de funcionários", "Index", "Funcionario")</li>
-                            <li>@Html.ActionLink("Relatorio de funcionários", "Index", "RelatorioFuncionario")</li>
-                        </ul>
-                    </li>
-                </ul>
-                @*Navbar do fornecedor*@
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Fornecedores<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Listagem de Fornecedores", "Index", "Fornecedor")</li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Jogos<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Jogos disponíveis", "Index", "Jogo")</li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Estoque<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Jogos em estoque", "Index", "Estoque")</li>
-                            <li>@Html.ActionLink("Relatório de Estoque", "Index", "RelatorioEstoque")</li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Entregas<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Entregas feitas", "Index", "Entrega")</li>
-                            <li>@Html.ActionLink("Relatório de Entregas", "Index", "RelatorioEntrega")</li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Sobre o sistema<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Quantidade de funcionários", "About", "Home")</li>
-                            @*<li>@Html.ActionLink("Relatório das últimas entregas", "#", "Entrega")</li>*@
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Seja Bem-Vindo @User.Identity.Name</a></li>
-                    @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" })) 
+                    @*Navbar do funcionario*@
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Funcionários <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Listagem de funcionários", "Index", "Funcionario")</li>
+                                <li>@Html.ActionLink("Relatorio de funcionários", "Index", "RelatorioFuncionario")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    @*Navbar do fornecedor*@
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Fornecedores<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Listagem de Fornecedores", "Index", "Fornecedor")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Jogos<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Jogos disponíveis", "Index", "Jogo")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Estoque<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Jogos em estoque", "Index", "Estoque")</li>
+                                <li>@Html.ActionLink("Relatório de Estoque", "Index", "RelatorioEstoque")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Entregas<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Entregas feitas", "Index", "Entrega")</li>
+                                <li>@Html.ActionLink("Relatório de Entregas", "Index", "RelatorioEntrega")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Sobre o sistema<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Quantidade de funcionários", "About", "Home")</li>
+                                @*<li>@Html.ActionLink("Relatório das últimas entregas", "#", "Entrega")</li>*@
+                            </ul>
+                        </li>
+                    </ul> 
+                    using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
                     {
-                        <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair<span class="glyphicon glyphicon-log-out" style="padding-left: 5px;"></span></a></li>
-                    }
-                </ul>}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Seja Bem-Vindo @User.Identity.Name</a></li>
+                            <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair<span class="glyphicon glyphicon-log-out" style="padding-left: 5px;"></span></a></li>
+                            
+                        </ul>}
+                }
             </div>
         </div>
     </div>

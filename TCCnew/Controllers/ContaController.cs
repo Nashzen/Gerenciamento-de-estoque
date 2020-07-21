@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.UI.WebControls;
 using TCCnew.Models;
 
 namespace TCCnew.Controllers
@@ -17,30 +18,35 @@ namespace TCCnew.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-        
+
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Login(Funcionario login, string returnUrl) 
+        public ActionResult Login(Funcionario login, string returnUrl)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
                 return View(login);
             }
 
-            var teste = (login.Usuario == "leo" && login.Cpf == "12345678910");
+            var procurar = Funcionario.AutorizarLogin(login.Usuario, login.Senha);
 
-            if (teste) 
+            if (procurar)
             {
-                FormsAuthentication.SetAuthCookie(login.Usuario, login.LembrarMe);
-                if (Url.IsLocalUrl(returnUrl)) 
+                FormsAuthentication.SetAuthCookie(login.Usuario, login.IsAtivo);
+                if (Url.IsLocalUrl(returnUrl))
                 {
                     return Redirect(returnUrl);
                 }
-                else 
+                else
                 {
                     RedirectToAction("Index", "Home");
                 }
             }
+            else
+            {
+                ModelState.AddModelError("", "Login inválido.");
+            }
+
             return View(login);
         }
 
@@ -53,3 +59,4 @@ namespace TCCnew.Controllers
         }
     }
 }
+
