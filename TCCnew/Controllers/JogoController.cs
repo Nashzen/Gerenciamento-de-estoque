@@ -88,7 +88,7 @@ namespace TCCnew.Controllers
         public ActionResult Edit([Bind(Include = "Id,Nome,CodigoBarras,Genero,DataLancamento,Preco,CreationDate")] Jogo jogo)
         {
             if (ModelState.IsValid)
-            {
+            {                          
                 db.Entry(jogo).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

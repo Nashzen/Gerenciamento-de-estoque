@@ -11,7 +11,7 @@ namespace TCCnew.Models.DAL
         {
             var funcionarios = new List<Funcionario>
             {
-                new Funcionario{Nome="admin", Usuario="admin",Cpf="11111111111",Telefone="1111111111", Salario=10}
+                new Funcionario{Nome="admin", Usuario="admin",Cpf="10789223902",Telefone="44998651760", Salario="10000", IsAtivo = true, IsGerente = false, Senha="admin", }
                 
             };
             funcionarios.ForEach(f => context.Funcionarios.Add(f));

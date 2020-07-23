@@ -181,6 +181,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\inputmask\inputmask.js" />
+    <Content Include="Scripts\inputmask\inputmask.min.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -235,7 +240,6 @@
     <Content Include="Views\Relatorio\RelatorioEntregaView.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\RelatorioEstoque\" />
     <Content Include="Views\Conta\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +260,9 @@
       <Project>{d93faa11-31f0-4629-b53c-aa8680283529}</Project>
       <Name>Rotativa</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\RelatorioEstoque\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
