@@ -124,7 +124,7 @@ namespace TCCnew.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Usuario,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate,Senha")] Funcionario funcionario)
+        public ActionResult Edit([Bind(Include = "Id,Nome,Usuario,Cpf,Telefone,Salario,IsAtivo,IsGerente,CreationDate")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             {

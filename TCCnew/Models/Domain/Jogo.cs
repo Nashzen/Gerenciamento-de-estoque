@@ -4,17 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using TCCnew.Models.Base;
 
 namespace TCCnew.Models
 {
     public class Jogo : EntityBase
     {
-        [HiddenInput(DisplayValue = false)]
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         [Display(Name = "Nome")]
         [StringLength(100, ErrorMessage = "Digite um nome", MinimumLength = 5)]
