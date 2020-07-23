@@ -13,8 +13,6 @@ namespace TCCnew.Models.Base
             CreationDate = DateTime.Now;
         }
 
-        [Key]
-
         public int Id { get; private set; }
 
         [Display(Name = "Data de criação")]

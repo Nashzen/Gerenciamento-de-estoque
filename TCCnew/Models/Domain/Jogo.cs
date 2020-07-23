@@ -29,10 +29,16 @@ namespace TCCnew.Models
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataLancamento { get; set; }
 
-        [Required]        
+        [Required]
+        [Range(0, 10000.00)]
         [Display(Name = "Preço")]
-        public string Preco { get; set; }
+        public double Preco { get; set; }
 
+        [Display(Name = "IdEstoque")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int IdEstoque { get; set; }
+
+        public virtual Estoque Estoque { get; set; }
 
     }
 }

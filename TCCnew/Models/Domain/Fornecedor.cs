@@ -17,7 +17,8 @@ namespace TCCnew.Models
         [Required]
         public string CNPJ { get; set; }
 
-        [Required]        
+        [Required]
+        [StringLength(11, ErrorMessage = "Telefone inválido", MinimumLength = 10)]
         public string Telefone { get; set; }
 
         [Required]

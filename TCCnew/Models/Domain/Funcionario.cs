@@ -20,12 +20,11 @@ namespace TCCnew.Models
 
         public string Telefone { get; set; }
 
-        public string Salario { get; set; }
+        public double Salario { get; set; }
 
-        [Display(Name = "Está Ativo?")]
+        [Display(Name = "Está Ativo")]
         public bool IsAtivo { get; set; }
 
-        [Display(Name = "É gerente?")]
         public bool IsGerente { get; set; }
 
         [Required]
@@ -40,13 +39,7 @@ namespace TCCnew.Models
 
             using (var con = new SqlConnection())
             {
-
-                //String matheus
-                //con.ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=D:\TCC\Gerenciamento-de-estoque\TCCnew\App_Data\TCCnew.mdf;Initial Catalog=TCCnew;Integrated Security=True";
-                //con.Open();
-
-                //String leo
-                con.ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=C:\Users\leo-s\Documents\GitHub\TCC-V2\Gerenciamento-de-estoque\TCCnew\App_Data\TCCnew.mdf;Initial Catalog=TCCnew;Integrated Security=True";
+                con.ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=D:\TCC\Gerenciamento-de-estoque\TCCnew\App_Data\TCCnew.mdf;Initial Catalog=TCCnew;Integrated Security=True";
                 con.Open();
                 using (var comando = new SqlCommand())
                 {
