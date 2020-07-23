@@ -5,11 +5,16 @@ using System.Data.Entity;
 using System.Linq;
 using TCCnew.Models.DAL;
 using System.Data.SqlClient;
+using System.Web.Mvc;
 
 namespace TCCnew.Models
 {
     public class Funcionario : EntityBase
     {
+        [HiddenInput(DisplayValue = false)]
+        [Key]
+        public int Id { get; set; }
+
         public string Nome { get; set; }
 
         [Required]
